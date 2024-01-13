@@ -1,0 +1,16 @@
+{
+    "name": "blogs",
+    "version": "1.0.0",
+    "description": "MERN Stack Blog Project",
+    "main": "index.js",
+    "scripts": {
+        "dev": "concurrently \"npm run backend\" \"npm run frontend\"",
+        "backend": "cd backend && npm run dev",
+        "frontend": "cd frontend && npm run dev"
+    },
+    "author": "Anmol Sonkar",
+    "license": "ISC",
+    "devDependencies": {
+        "concurrently": "^8.2.2"
+    }
+}
