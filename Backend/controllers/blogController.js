@@ -5,7 +5,7 @@ const blog_index = async (req, res) => {
         const result = await Blog.find().sort({ createdAt: -1 });
         res.send(result)
     } catch (error) {
-        console.log(error);
+        res.send(error)
     }
 };
 
@@ -15,7 +15,7 @@ const blog_details = async (req, res) => {
         const result = await Blog.findOne({ slug: slug })
         res.send(result)
     } catch (error) {
-        console.log(error);
+        res.send(error)
     }
 };
 
@@ -29,7 +29,7 @@ const blog_create_post = async (req, res) => {
         const result = await blog.save();
         res.send(result);
     } catch (error) {
-        console.log(error);
+        res.send(error)
     }
 };
 
@@ -42,7 +42,7 @@ const blog_update = async (req, res) => {
         const result = await Blog.findOne({ slug: slug });
         res.render('/edit', { title: "Edit", blogs: result });
     } catch (error) {
-        console.error(error);
+        res.send(error)
     }
 };
 
@@ -63,7 +63,7 @@ const blog_update_post = async (req, res) => {
         res.send(result);
 
     } catch (error) {
-        console.error(error);
+        res.send(error)
     }
 };
 
@@ -74,7 +74,7 @@ const blog_delete = async (req, res) => {
         const result = await Blog.findByIdAndDelete(id);
         res.send(result);
     } catch (error) {
-        console.error(error);
+        res.send(error)
     }
 };
 export default {

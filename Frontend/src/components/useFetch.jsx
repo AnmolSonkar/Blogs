@@ -14,12 +14,12 @@ const useFetch = (url) => {
                 }
                 const data = await res.json();
                 setData(data);
-                setLoading(false);
                 setError(null);
             } catch (error) {
                 setError(error.message);
-                setLoading(false);
                 setData(null);
+            } finally {
+                setLoading(false);
             }
         };
         fetchData();

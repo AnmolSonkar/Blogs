@@ -10,10 +10,11 @@ app.use(cors());
 app.use(express.json());
 
 const dbURI = process.env.MONGODB_URI;
+const port = process.env.PORT || 3000
 
 const startServer = () => {
-    app.listen(3000, 'localhost', () => {
-        console.log("Server is running on port 3000.");
+    app.listen(port, () => {
+        console.log(`server is running on port ${port}`);
     });
 };
 

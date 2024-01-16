@@ -23,7 +23,6 @@ const BlogDetails = () => {
             }
 
             const data = await response.json();
-            // console.log("Blog deleted successfully", data);
             navigate("/");
         } catch (error) {
             console.error("Error deleting blog:", error.message);
