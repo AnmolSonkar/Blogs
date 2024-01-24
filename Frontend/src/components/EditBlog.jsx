@@ -71,6 +71,7 @@ const Edit = () => {
                 <label className="mt-2"> Blog Content</label>
                 <textarea
                     rows={7}
+                    value={body}
                     onChange={(e) => setBody(e.target.value)}
                     className="p-2 resize mt-2 outline-none rounded-sm  transition-all ease-in-out"
                     required
