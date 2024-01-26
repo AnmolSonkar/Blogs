@@ -6,7 +6,7 @@ import DOMPurify from "dompurify";
 
 const BlogDetails = () => {
     const { id } = useParams();
-    const { data: blog, loading, error } = useFetch("http://localhost:3000/" + id);
+    const { data: blog, loading, error } = useFetch("http://localhost:5000/" + id);
 
     const html = blog && DOMPurify.sanitize(blog.marked_sanitized_html);
 
@@ -14,7 +14,7 @@ const BlogDetails = () => {
 
     const handleClick = async () => {
         try {
-            const response = await fetch("http://localhost:3000/" + blog._id, {
+            const response = await fetch("http://localhost:5000/" + blog._id, {
                 method: "DELETE",
             });
 
@@ -22,7 +22,7 @@ const BlogDetails = () => {
                 throw new Error(`Failed to delete blog. Status: ${response.status}`);
             }
 
-            const data = await response.json();
+            await response.json();
             navigate("/");
         } catch (error) {
             console.error("Error deleting blog:", error.message);

@@ -2,7 +2,7 @@ import BlogList from "./BlogList";
 import useFetch from "./useFetch";
 
 const Main = () => {
-    const { data: blogs, loading, error } = useFetch("http://localhost:3000/");
+    const { data: blogs, loading, error } = useFetch("http://localhost:5000/");
 
     return (
         <main className="flex-grow p-4">

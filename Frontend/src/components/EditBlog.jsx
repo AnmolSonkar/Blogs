@@ -4,7 +4,7 @@ import { useParams, useNavigate } from "react-router-dom";
 
 const Edit = () => {
     const { id } = useParams();
-    const { data: blog } = useFetch("http://localhost:3000/" + id);
+    const { data: blog } = useFetch("http://localhost:5000/" + id);
     const [title, setTitle] = useState("");
     const [body, setBody] = useState("");
     const [loading, setLoading] = useState(false);
@@ -24,7 +24,7 @@ const Edit = () => {
         setLoading(true);
 
         try {
-            const response = await fetch(`http://localhost:3000/${blog._id}`, {
+            const response = await fetch(`http://localhost:5000/${blog._id}`, {
                 method: "PUT",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(updatedBlog),

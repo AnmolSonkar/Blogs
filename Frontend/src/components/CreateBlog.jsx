@@ -15,7 +15,7 @@ const Create = () => {
         setLoading(true);
 
         try {
-            const send = await fetch("http://localhost:3000/", {
+            const send = await fetch("http://localhost:5000/", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(blog),
