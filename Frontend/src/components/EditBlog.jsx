@@ -58,7 +58,7 @@ const Edit = () => {
                 </div>
             )}
 
-            <form className="flex flex-col mt-[4rem] lg:w-3/12 w-full" onSubmit={handleSubmit}>
+            <form className="flex flex-col w-full" onSubmit={handleSubmit}>
                 <label>Blog Title</label>
                 <input
                     className="p-2 mt-2 outline-none rounded-sm  transition-all ease-in-out"
@@ -70,7 +70,7 @@ const Edit = () => {
 
                 <label className="mt-2"> Blog Content</label>
                 <textarea
-                    rows={7}
+                    rows={16}
                     value={body}
                     onChange={(e) => setBody(e.target.value)}
                     className="p-2 resize mt-2 outline-none rounded-sm  transition-all ease-in-out"

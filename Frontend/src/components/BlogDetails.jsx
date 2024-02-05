@@ -3,6 +3,7 @@ import useFetch from "./useFetch";
 import Edit from "./EditBlog";
 import { Link, useNavigate } from "react-router-dom";
 import DOMPurify from "dompurify";
+import 'highlight.js/styles/github.css';
 
 const BlogDetails = () => {
     const { id } = useParams();

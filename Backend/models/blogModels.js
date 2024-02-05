@@ -1,8 +1,17 @@
 import mongoose from 'mongoose';
-import { marked } from 'marked';
+import { Marked } from "marked";
+import { markedHighlight } from "marked-highlight";
+import hljs from 'highlight.js';
 import slugify from 'slugify';
 import createDOMPurify from 'dompurify';
 import { JSDOM } from 'jsdom';
+
+
+const marked = new Marked(markedHighlight({
+    highlight: function (code) {
+        return hljs.highlightAuto(code).value;
+    }
+}));
 
 const DOMPurify = createDOMPurify(new JSDOM('').window);
 
