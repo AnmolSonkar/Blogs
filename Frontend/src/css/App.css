@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
 body {
     margin: 0;
@@ -8,8 +8,8 @@ body {
 
 body,
 html {
-    background-color: #F1F3F4;
-    font-family: 'Roboto', sans-serif;
+    background-color: #f1f3f4;
+    font-family: "Roboto", sans-serif;
 }
 
 .html h1,
@@ -33,12 +33,11 @@ html {
 }
 
 .html pre {
-
     background-color: #fff;
     padding: 1rem;
     border: 1px solid #ddd;
-    border-radius: .5rem;
+    border-radius: 0.5rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
-
+    overflow: auto;
 }
